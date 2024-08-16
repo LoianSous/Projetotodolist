@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+</head>
+<body>
+    <div id="form">
+        <div class="todo">
+            <h1>TodoList</h1>
+            <hr class="linha">
+            <div class="addtarefa">
+                <h2>Adicione sua tarefa:</h2>
+                <input type="text" id="tarefaInput" name="tarefaName" placeholder="Adicione a sua tarefa">
+                <select name="prioridadeTarefa" id="prioridadeTarefa">
+                    <option value="Alto">Alto</option>
+                    <option value="Médio">Médio</option>
+                    <option value="Baixo">Baixo</option>
+                </select>
+                <button class="button" id="addButton" name="addButton">+</button>
+            </div>
+            <div class="addtarefa">
+                <h2>Pesquisa:</h2>
+                <input type="text" id="pesquisaInput" name="pesquisaName" placeholder="Busca">
+                <button class="button" id="pesquisaButton" name="pesquisaButton">+</button>
+                <h2>Filtrar:</h2>
+                <select name="filtroPrioridade" id="filtroPrioridade">
+                    <option value="Todos">Todos</option>
+                    <option value="NaoFeitos">Não feitos</option>
+                    <option value="Feitos">Feitos</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
