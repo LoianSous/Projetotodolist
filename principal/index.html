@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TodoList</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 </head>
 <body>
     <div id="container">
@@ -21,8 +22,7 @@
                     <option value="medio">Médio</option>
                     <option value="baixo">Baixo</option>
                 </select>
-
-                <button type="submit">+</button>
+                <button type="submit"><box-icon name='plus'></box-icon></button>
             </div>
         </form>
         
@@ -32,14 +32,30 @@
                 <h2>Pesquisar:</h2>
                 <form>
                     <input type="text" id="pesquisa_input" placeholder="Buscar">
-                    <button id="botao_apagar">COLOCAR ICONE DPS</button> 
+                    <button id="botao_apagar"><box-icon type='solid' name='tag-x'></box-icon></button> 
                 </form>
             </div>
         </div>
 
         <div id="filto">
             <h2>Filtrar</h2>
-            
+            <select name="select_filto" id="select_filto">
+                <option value="todos">Todos</option>
+                <option value="feito">Feito</option>
+                <option value="a-fazer">Não concluído</option>
+            </select>
+        </div>
+        <div id="tarefa">
+            <h3>fazer café</h3>
+            <button class="botao_verde"><box-icon name='check'></box-icon></button>
+            <button class="botao_editar"><box-icon name='edit-alt' ></box-icon></button>
+            <button class="botao_excluir"><box-icon name='x-circle'></box-icon></button>
+        </div>
+        <div id="tarefa">
+            <h3>fazer bolo</h3>
+            <button class="botao_verde"><box-icon name='check'></box-icon></button>
+            <button class="botao_editar"><box-icon name='edit-alt' ></box-icon></button>
+            <button class="botao_excluir"><box-icon name='x-circle'></box-icon></button>
         </div>
     </div>
 </body>
