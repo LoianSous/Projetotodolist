@@ -23,6 +23,11 @@ button{
 
 }
 
+button:hover{
+    background-color: #102f5e;
+    color: #fff
+}
+
 #container{
     max-width: 600px;
     margin: 3rem auto;
@@ -36,7 +41,56 @@ header{
     margin-bottom: 2rem;
 }
 
-.formulario_ferramentas{
-    padding: 1rem;
-    
+#formulario p{
+    font-weight: bold;
+    font-size: 24px;
 }
+
+.formulario_ferramentas{
+    padding: 0.5rem;
+    display: flex;
+    gap: 6px;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+
+#select{
+    width: 90px;
+    border-radius: 5px;
+}
+
+.formulario_ferramentas input{
+    width: 18rem;
+    border-radius: 5px;
+}
+
+#formulario_baixo input{
+    width: 10rem;
+    border-radius: 5px;
+}
+
+#pesquisa form{
+    padding: 0.4rem;
+    display: flex;
+    gap: 5px;
+}
+
+#pesquisa_input, #form_input{
+    padding-left: 5px;
+}
+
+#formulario_baixo{
+    display: flex;
+    gap: 3rem;
+}
+
+#select_filto {
+    width: 160px;
+    margin-top: 5px;
+    font-size: 16px; /* Opcional: Ajusta o tamanho da fonte */
+    padding: 0.4rem;
+    border-radius: 5px;
+}
+
+
+
