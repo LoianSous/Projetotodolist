@@ -66,7 +66,7 @@ function mostrarTarefas() {
 }
 
 function concluirTarefa(posicao){
-    itensAMostra[posicao].concluida = !i[posicao].concluida
+    itensAMostra[posicao].concluida = !itensAMostra[posicao].concluida
 
     console.log(lista)
     mostrarTarefas()
@@ -102,7 +102,7 @@ function filtrarTarefas(){
 
     mostrarTarefas()
 
-    console.log(filtrarTarefas)
+    
 }
 
 recarregarTarefa()
