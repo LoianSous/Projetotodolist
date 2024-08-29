@@ -102,7 +102,7 @@ function filtrarTarefas(){
 
     mostrarTarefas()
 
-    
+    console.log(filtrarTarefas)
 }
 
 recarregarTarefa()
