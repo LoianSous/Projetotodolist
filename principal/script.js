@@ -23,7 +23,7 @@ function mostrarTarefas() {
 
         novoCard = novoCard + `
         
-        <div class="card task-card">
+        <div class="card task-card ${item.concluida && "feito"}">
                 <img src="#" class="card-img-top" alt="Imagem de Prioridade">
                 <div class="card-body">
                     <div>
@@ -32,7 +32,7 @@ function mostrarTarefas() {
                     </div>
                     <div class="task-buttons">
                         <button class="btn btn-success">
-                            <box-icon name='concluido' color="white" onclick="concluirTarefa(${posicao})"></box-icon>
+                            <box-icon name='check-double' color="white" onclick="concluirTarefa(${posicao})"></box-icon>
                         </button>
                         <button class="btn btn-warning">
                             <box-icon name='edit' color="white"></box-icon>
@@ -52,6 +52,9 @@ function mostrarTarefas() {
 
 function concluirTarefa(posicao){
     lista[posicao].concluida = !lista[posicao].concluida
+
+    mostrarTarefas()
+    console.log(posicao)
 }
 
 function deletarTarefa(posicao){

@@ -90,6 +90,11 @@ body {
 .btn-success {
     background-color: #27ae60;
 }
+
+.feito{
+    background-color: #366a4c;
+}
+
 .btn-success:hover {
     background-color: #2ecc71;
 }
