@@ -32,7 +32,7 @@ function mostrarTarefas() {
                     </div>
                     <div class="task-buttons">
                         <button class="btn btn-success">
-                            <box-icon name='concluido' color="white" onclick="concluirTarefa(${posicao})"></box-icon>
+                            <box-icon name='check-double' color="white" onclick="concluirTarefa(${posicao})"></box-icon>
                         </button>
                         <button class="btn btn-warning">
                             <box-icon name='edit' color="white"></box-icon>
