@@ -87,6 +87,12 @@ body {
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
 }
+
+.feito{
+    background-color: #21e874;
+    text-decoration: line-through;
+}
+
 .btn-success {
     background-color: #27ae60;
 }
