@@ -87,12 +87,9 @@ body {
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
 }
-.btn-success {
-    background-color: #27ae60;
-}
 
 .feito{
-    background-color: #366a4c;
+    background-color: #27ae60 !important;
 }
 
 .btn-success:hover {

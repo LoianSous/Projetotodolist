@@ -23,7 +23,7 @@ function mostrarTarefas() {
 
         novoCard = novoCard + `
         
-        <div class="card task-card ${item.concluida && "feito"}">
+        <div class="card task-card ${item.concluida ? "feito":""}">
                 <img src="#" class="card-img-top" alt="Imagem de Prioridade">
                 <div class="card-body">
                     <div>
@@ -53,6 +53,7 @@ function mostrarTarefas() {
 function concluirTarefa(posicao){
     lista[posicao].concluida = !lista[posicao].concluida
 
+    console.log(lista)
     mostrarTarefas()
     console.log(posicao)
 }
