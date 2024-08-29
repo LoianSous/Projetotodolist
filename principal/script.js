@@ -1,14 +1,26 @@
 const botao = document.getElementById("addTaskBtn")
 const texto = document.getElementById("taskInput")
 const listaCompleta = document.getElementById("taskList")
+const prioridade_tarefa = document.getElementById("priorityInput")
+const filtro_texto = document.getElementById("filterInput")
+const filtro = document.getElementById("filterPriority")
+
 
 let lista = []
+let itensAMostra = []
 
 function AdicionarNovaTarefa() {
-    lista.push({
+    const prioridade = priorityInput.value;
+    const itemNovo = {
         tarefa: texto.value,
+        prioridade: prioridade,
+        filtro: prioridade_tarefa,
         concluida: false
-    })
+    }
+
+    lista.push(itemNovo)
+
+    itensAMostra.push(itemNovo)
 
     texto.value = ''
 
@@ -19,7 +31,7 @@ function mostrarTarefas() {
 
     let novoCard = ''
 
-    lista.forEach( (item, posicao) => {
+    itensAMostra.forEach( (item, posicao) => {
 
         novoCard = novoCard + `
         
@@ -28,7 +40,7 @@ function mostrarTarefas() {
                 <div class="card-body">
                     <div>
                         <h5 class="card-title">${item.tarefa}</h5>
-                        <p class="card-text">Prioridade:</p>
+                        <p class="card-text">Prioridade: ${ item.prioridade}</p>
                     </div>
                     <div class="task-buttons">
                         <button class="btn btn-success">
@@ -45,13 +57,16 @@ function mostrarTarefas() {
             </div>
 
         `
+        console.log(item)
 
         listaCompleta.innerHTML = novoCard
+
+        localStorage.setItem('lista', JSON.stringify(lista))
     })
 }
 
 function concluirTarefa(posicao){
-    lista[posicao].concluida = !lista[posicao].concluida
+    itensAMostra[posicao].concluida = !i[posicao].concluida
 
     console.log(lista)
     mostrarTarefas()
@@ -59,9 +74,38 @@ function concluirTarefa(posicao){
 }
 
 function deletarTarefa(posicao){
-    lista.splice(posicao, 1)
+    itensAMostra.splice(posicao, 1)
 
     mostrarTarefas()   
 }
 
+function recarregarTarefa(){
+    const tarefa_armazenada = localStorage.getItem('lista')
+
+    if (tarefa_armazenada) {
+        lista = JSON.parse(tarefa_armazenada)
+    }
+
+
+    mostrarTarefas()
+}
+
+function filtrarTarefas(){
+    const textoFiltro = filtro_texto.value.toLowerCase();
+    const valorPrioridade= prioridade_tarefa.value;
+
+    
+    if (textoFiltro || valorPrioridade != "Todos"){
+        itensAMostra = lista.filter(lista => lista.tarefa.toLowerCase().includes(textoFiltro));
+       // itensAMostra = itensPorNome.filter(lista => lista.prioridade == valorPrioridade); 
+    }
+
+    mostrarTarefas()
+
+    
+}
+
+recarregarTarefa()
 botao.addEventListener('click', AdicionarNovaTarefa)
+filtro_texto.addEventListener('change', filtrarTarefas)
+// filtro.addEventListener('change', filtrarTarefas)

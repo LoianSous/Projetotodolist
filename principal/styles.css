@@ -90,6 +90,7 @@ body {
 
 .feito{
     background-color: #27ae60 !important;
+    text-decoration: line-through;
 }
 
 .btn-success:hover {
