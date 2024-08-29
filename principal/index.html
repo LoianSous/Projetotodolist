@@ -10,20 +10,20 @@
     <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container mt-5">
+    <div class="container">
         <div class="card shadow-lg p-4">
-            <h1 class="text-center text-primary mb-4">My lista de tarefas</h1>
+            <h1 class="text-center text-primary mb-4">Lista de tarefas</h1>
             
             <div class="mb-4">
                 <h5>Adicione sua tarefa</h5>
                 <div class="input-group">
-                    <input type="text" id="taskInput" class="form-control me-2" placeholder="Vai fazer o que?">
-                    <select id="priorityInput" class="form-select me-2" style="max-width: 120px;">
+                    <input type="text" id="tarefaInput" class="form-control me-2" placeholder="Vai fazer o que?">
+                    <select id="prioridadeInput" class="form-select me-2" style="max-width: 120px;">
                         <option value="Baixo">Baixo</option>
                         <option value="Médio">Médio</option>
                         <option value="Alto">Alto</option>
                     </select>
-                    <button class="btn btn-primary" id="addTaskBtn">
+                    <button class="btn btn-primary" id="addTarefaBtn">
                         <box-icon name='plus' color="white"></box-icon>
                     </button>
                 </div>
@@ -33,11 +33,11 @@
                 <div class="row">
                     <div class="col-md-6">
                         <h5>Pesquisar</h5>
-                        <input type="text" id="filterInput" class="form-control" placeholder="Buscar...">
+                        <input type="text" id="filtroInput" class="form-control" placeholder="Buscar...">
                     </div>
                     <div class="col-md-6">
                         <h5>Filtrar</h5>
-                        <select id="filterPriority" class="form-select">
+                        <select id="filtroPrioridade" class="form-select">
                             <option value="">Todos</option>
                             <option value="Baixo">Baixo</option>
                             <option value="Médio">Médio</option>
@@ -47,7 +47,7 @@
                 </div>
             </div>
             
-            <div id="taskList" class="row g-3"></div>
+            <div id="listaTarefas" class="row g-3"></div>
             
         </div>
     </div>
