@@ -97,7 +97,7 @@ function filtrarTarefas() {
     }
 
     if (!textoFiltro && valorPrioridade === "Todos") {
-        itensAMostra = lista.slice();  
+        itensAMostra = lista.slice();   
     }
 
     mostrarTarefas()
