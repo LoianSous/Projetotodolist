@@ -30,12 +30,21 @@ function AdicionarNovaTarefa() {
     mostrarTarefas()
 }
 
+function editarTarefa(posicao) {
+    const novoTexto = prompt("Edite a tarefa:", lista[posicao].tarefa);
+    if (novoTexto !== null && novoTexto.trim() !== "") {
+        lista[posicao].tarefa = novoTexto.trim();
+        itensAMostra = lista.slice();
+        mostrarTarefas();
+    }
+}
+
 function mostrarTarefas() {
-    let novoCard = ''
+    let novoCard = '';
 
     itensAMostra.forEach((item, posicao) => {
 
-        let imagem = imagemprioridade[item.prioridade]
+        let imagem = imagemprioridade[item.prioridade];
 
         novoCard += `
         <div class="card task-card ${item.concluida ? "feito" : ""}">
@@ -49,7 +58,7 @@ function mostrarTarefas() {
                     <button class="btn btn-success" onclick="concluirTarefa(${posicao})">
                         <box-icon name='check-double' color="white"></box-icon>
                     </button>
-                    <button class="btn btn-warning">
+                    <button class="btn btn-warning" onclick="editarTarefa(${posicao})">
                         <box-icon name='edit' color="white"></box-icon>
                     </button>
                     <button class="btn btn-danger" onclick="deletarTarefa(${posicao})">
@@ -58,12 +67,12 @@ function mostrarTarefas() {
                 </div>
             </div>
         </div>
-        `
-    })
+        `;
+    });
 
-    listaCompleta.innerHTML = novoCard
+    listaCompleta.innerHTML = novoCard;
 
-    localStorage.setItem('lista', JSON.stringify(lista))
+    localStorage.setItem('lista', JSON.stringify(lista));
 }
 
 function concluirTarefa(posicao) {
