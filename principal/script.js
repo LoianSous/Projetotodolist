@@ -75,8 +75,10 @@ function mostrarTarefas() {
     localStorage.setItem('lista', JSON.stringify(lista));
 }
 
-function concluirTarefa(posicao) {
-    itensAMostra[posicao].concluida = !itensAMostra[posicao].concluida
+function concluirTarefa(posicao){
+    itensAMostra[posicao].concluida = !i[posicao].concluida
+
+    console.log(lista)
     mostrarTarefas()
 }
 
@@ -110,6 +112,8 @@ function filtrarTarefas() {
     }
 
     mostrarTarefas()
+
+    console.log(filtrarTarefas)
 }
 
 recarregarTarefas()
